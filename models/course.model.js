@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const videoSchema = new mongoose.Schema(
+const courseSchema = new mongoose.Schema(
   {
     title: { type: String, required: true },
     thumbnail: { type: String, required: true },
@@ -13,4 +13,4 @@ const videoSchema = new mongoose.Schema(
   { timestamps: true },
 );
 
-module.exports = mongoose.model("Video", videoSchema);
+module.exports = mongoose.model("Course", courseSchema);

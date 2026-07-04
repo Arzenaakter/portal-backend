@@ -13,7 +13,8 @@ const connectDB = async () => {
 };
 
 const authRoutes = require("./routes/auth.routes");
-const videoRoutes = require("./routes/video.routes");
+const coursesRoutes = require("./routes/course.routes");
+const contactRoutes = require("./routes/contact.routes");
 
 const app = express();
 
@@ -26,7 +27,8 @@ app.use(express.json());
 
 // Routes
 app.use("/api/auth", authRoutes);
-app.use("/api/videos", videoRoutes);
+app.use("/api/courses", coursesRoutes);
+app.use("/api/contact", contactRoutes);
 
 // Base Route
 app.get("/", (req, res) => {
